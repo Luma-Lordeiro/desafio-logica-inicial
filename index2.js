@@ -32,7 +32,7 @@
   ///guerreiro atacou usando espada
 
   // Utilizado para entrada de dados
-class Hero {
+class Heroi {
  
     constructor(nome, idade, tipo) {
         this.nome = nome;
@@ -42,7 +42,7 @@ class Hero {
         this.tipo = tipo % this.tipos.length;
     }
     getTipo() {
-        return this.tipos[this.tipo];
+        return this.tipos[this.tipos];
     }
     getAtaque() {
         return this.ataques[this.tipo];
@@ -54,9 +54,10 @@ class Hero {
         console.log(`Nome: ${this.nome}, idade: ${this.idade}, Tipo: ${this.getTipo()}`);
     }
 }
+
 let nome = input.question('Informe do heroi: ');
 let idade = input.questionInt('Informe a idade do heroi: ');
 let tipo = input.question('Informe o tipo heroi [mago, guerreiro, monge ou ninja]: ');
 
-let heroi = new Heroi(nome, idade, tipo.toLowerCase()); 
+let heroi = new Heroi(nome, idade, tipo.getTipo()); 
 heroi.atacar(); 
